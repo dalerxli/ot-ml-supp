@@ -16,7 +16,7 @@ copy-and-paste the code directly into python) or install Jupyter.
 * Keras
 * Tensorflow
 * Jupyter Notebook (for running examples)
-* Matplotlib (for 3dof-example code)
+* Matplotlib (for example-3dof-dataset code)
 
 The easiest way to install all the dependencies is to download
 [anaconda](https://www.anaconda.com/distribution/) and install the
