@@ -25,7 +25,10 @@ For compatability with Matlab, you may need to use an older version of Keras.
 We found that Matlab 2018a was incompatible with Keras versions above 2.2.4.
 
 ## Usage
-[TODO]
+The repository is split into 3 parts:
+* `example-3dof-dataset/*` contains an example notebook for training a 3-DOF network.
+* `networks/*` contains pre-trained networks used in the paper
+* `template.ipynb` and `template.pdf` provide example code for training your own network.
 
 ## Citations
 If you find this repository useful, please cite the associated
