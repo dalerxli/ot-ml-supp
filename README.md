@@ -7,7 +7,22 @@ For a live demo of the artificial neural network predicting force in a
 optical trap, see [Tweezers-ML](https://ilent2.github.io/tweezers-ml/).
 
 ## Dependencies
-[TODO]
+To train the networks we used Tensorflow via Keras.
+Examples are provided in Jupyter Notebooks, to run the examples
+you can either extract the code from the notebook/PDF (i.e.,
+copy-and-paste the code directly into python) or install Jupyter.
+
+* Python
+* Keras
+* Tensorflow
+* Jupyter Notebook (for running examples)
+* Matplotlib (for 3dof-example code)
+
+The easiest way to install all the dependencies is to download
+[anaconda](https://www.anaconda.com/distribution/) and install the
+[Keras package](https://anaconda.org/conda-forge/keras).
+For compatability with Matlab, you may need to use an older version of Keras.
+We found that Matlab 2018a was incompatible with Keras versions above 2.2.4.
 
 ## Usage
 [TODO]
