@@ -30,6 +30,10 @@ The repository is split into 3 parts:
 * `networks/*` contains pre-trained networks used in the paper
 * `template.ipynb` and `template.pdf` provide example code for training your own network.
 
+## Quick-start guide
+
+TODO
+
 ## Citations
 If you find this repository useful, please cite the associated
 paper:
