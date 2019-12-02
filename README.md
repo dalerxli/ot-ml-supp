@@ -32,7 +32,25 @@ The repository is split into 3 parts:
 
 ## Quick-start guide
 
-TODO
+The networks can be loaded into Matlab or any framework that supports
+Keras-Tensorflow networks (for Python, see details in
+`networks/Readme.md`).  In Matlab you will need the Keras support package.
+To load one of the networks and evaluate points using the network use
+
+```
+net = importKerasNetwork('./path/to/network.h5');
+
+% Evaluate the network at 20 points (assuming 3-dof network)
+ndof = 3;
+npts = 20;
+x = rand(ndof, npts);
+force = double(predict(net, reshape(x, [1, ndof, 1, npts]))).';
+```
+
+The range for parameters and the number of inputs `ndof`
+will depend on the particular network.
+In most cases, it is faster to evaluate more than one point at a
+time (at least in Matlab).
 
 ## Citations
 If you find this repository useful, please cite the associated
