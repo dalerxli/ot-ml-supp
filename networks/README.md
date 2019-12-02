@@ -56,6 +56,7 @@ Networks trained to estimate the optical force on a spherical particle
 with different size and refractive index at different positions in
 a single circularly polarised Gaussian beam.
 This folder contains 7 networks with different numbers of hidden nodes.
-
+The network with 64 nodes per layer is used
+by [Tweezers-ML](https://ilent2.github.io/tweezers-ml/).
 
 
