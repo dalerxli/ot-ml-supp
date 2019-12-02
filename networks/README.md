@@ -30,6 +30,11 @@ p2 = [0, 0, 0, 0, 0]
 f = net.predict([[p1, p2]])
 ```
 
+The input parameter range and scaling for the calculated force
+depend on the particular network.
+The forces detailed bellow are in units of Q (dimensionless trapping
+efficiency).  The conversion from Q to Newtons is: `Newtons = Q*index_medium*power/speed0`.
+
 # 3dof-position
 Networks trained to estimate the optical force on a particle in
 a single circularly polarised Gaussian beam.
@@ -38,6 +43,13 @@ data set with different numbers of hidden nodes.
 By averaging the predictions of multiple networks, the estimated
 optical force becomes more accurate.
 If you only want a single network, use `3dof-position/net0/nn3dof_size_256.h5`.
+
+Parameters:
+  1. X Position (Units: microns, Gaussian distribution, centred at 0, FWHM: ~5)
+  2. Y Position (Units: microns, Gaussian distribution, centred at 0, FWHM: ~5)
+  3. Z Position (Units: microns, Gaussian distribution, centred at 0, FWHM: ~5)
+  
+Calculates force (Units: 1000Q)
 
 # 4dof-position-alpha
 Network trained to model experiment with 2 micron diameter spheres
@@ -51,6 +63,14 @@ heights from 0 to 1 micron.
 The particle has a refractive index of 1.59, and the background
 refractive index is 1.33.
 
+Parameters:
+  1. X Position (Units: microns, see range above)
+  2. Y Position (Units: microns, see range above)
+  3. Z Position (Units: microns, see range above)
+  4. Beam mixture ratio (Range: 0 to 1)
+  
+Calculates force (Units: 20Q)
+
 # 5dof-position-size-ri
 Networks trained to estimate the optical force on a spherical particle
 with different size and refractive index at different positions in
@@ -59,4 +79,16 @@ This folder contains 7 networks with different numbers of hidden nodes.
 The network with 64 nodes per layer is used
 by [Tweezers-ML](https://ilent2.github.io/tweezers-ml/).
 
+Background medium has refractive index of 1.33.
+May not work very well for low temperature simulations.
+For low temperature simulations: retrain network with smaller
+distribution of particle positions.
 
+Parameters:
+  1. X Position
+  2. Y Position
+  3. Z Position
+  4. Radius (Units: microns, range: 0.1 to 1)
+  5. Refractive index (range: 1.33 to 2)
+
+Calculates force (Units: `(radius_particle_mu).^2*(index_particle-1.33)*Q/index_medium`).
