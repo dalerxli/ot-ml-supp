@@ -39,6 +39,18 @@ By averaging the predictions of multiple networks, the estimated
 optical force becomes more accurate.
 If you only want a single network, use `3dof-position/net0/nn3dof_size_256.h5`.
 
+# 4dof-position-alpha
+Network trained to model experiment with 2 micron diameter spheres
+trapped in 2-D against the microscope cover-slip in a linearly
+polarised beam mixture (approximate NA of 1.2).
+The network has 4 DOF: particle position and beam mixture ratio.
+The network includes xyz position in a doughnut-shaped region around
+the beam, values outside this region are probably incorrect.
+The region is bound by radius 0.5 micron to 2 micron and
+heights from 0 to 1 micron.
+The particle has a refractive index of 1.59, and the background
+refractive index is 1.33.
+
 # 5dof-position-size-ri
 Networks trained to estimate the optical force on a spherical particle
 with different size and refractive index at different positions in
