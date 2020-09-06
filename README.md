@@ -1,7 +1,7 @@
 # ot-ml-supp
 This respository contains code examples, pre-trained networks and an example data
-set to acompany the paper *Machine learning reveals complex behaviours in optically
-trapped particles* (Journal to be confirmed) ([arXiv pre-print](https://arxiv.org/abs/2004.08264)).
+set to acompany the paper [*Machine learning reveals complex behaviours in optically
+trapped particles*, Machine Learning Science and Technology, 2020](https://doi.org/10.1088/2632-2153/abae76)
 
 For a live demo of the artificial neural network predicting force in a
 optical trap, see [Tweezers-ML](https://ilent2.github.io/tweezers-ml/).
@@ -59,7 +59,7 @@ paper:
 
 Isaac C. D. Lenton, Giovanni Volpe, Alexander B. Stilgoe, Timo A. Nieminen, Halina Rubinsztein-Dunlop,
 *Machine learning reveals complex behaviours in optically trappedparticles*
-[Journal to be confirmed]
+Machine Learning Science and Technology, 2020, https://doi.org/10.1088/2632-2153/abae76
 
 ## Funding
 This research was funded by the Australian Government through the Australian 
