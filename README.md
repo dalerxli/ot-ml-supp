@@ -58,7 +58,7 @@ paper:
 
 
 Isaac C. D. Lenton, Giovanni Volpe, Alexander B. Stilgoe, Timo A. Nieminen, Halina Rubinsztein-Dunlop,
-*Machine learning reveals complex behaviours in optically trappedparticles*
+*Machine learning reveals complex behaviours in optically trappedparticles*,
 Machine Learning Science and Technology, 2020, https://doi.org/10.1088/2632-2153/abae76
 
 ## Funding
